@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fastjson.gui.MainPane">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="设置">
+                    <items>
+                        <MenuItem fx:id="proxySetup" mnemonicParsing="false" text="代理" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TitledPane animated="false" text="检测目标">
+            <content>
+                <HBox prefHeight="49.0" prefWidth="988.0" spacing="8.0">
+                    <children>
+                        <ComboBox fx:id="methodOpt" prefHeight="25.0" prefWidth="99.0" promptText="GET" />
+                        <Label text="目标地址">
+                            <HBox.margin>
+                                <Insets top="4.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="targetAddress" prefHeight="27.0" prefWidth="576.0" />
+                        <Label layoutX="20.0" layoutY="23.0" prefHeight="17.0" prefWidth="82.0" text="超时设置/s">
+                            <HBox.margin>
+                                <Insets top="4.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="httpTimeout" layoutX="80.0" layoutY="20.0" prefHeight="25.0" prefWidth="110.0" />
+                    </children>
+                </HBox>
+            </content>
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TitledPane>
+    </children>
+</VBox>
